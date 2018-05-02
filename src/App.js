@@ -1,9 +1,16 @@
 import React, { Component } from 'react';
 
+import Header from './components/Header/Header';
+import Page from './containers/Page/Page.js';
+
 class App extends Component {
   render() {
     return (
-      null
+      <div>
+        <Header />
+        <Page isDevWork />
+        <Page />
+      </div>
     );
   }
 }
