@@ -40,6 +40,8 @@ class Page extends React.Component {
         description={brick.description}
         width={brick.width}
         height={brick.height == null ? '300px' : brick.height}
+        innerBricks={brick.innerBricks}
+        image={brick.image}
       />
     ))
 

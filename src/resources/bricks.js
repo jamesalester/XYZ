@@ -1,3 +1,5 @@
+import sfereImage from '../assets/portfolio/sfere/sfere-hero.jpg';
+
 export const developmentBricks = {
 
   /*------*/
@@ -5,7 +7,7 @@ export const developmentBricks = {
   'pnt' : {
     title: 'Paranormal Today Series',
     description: 'A Series of apps...',
-    width: '100%'
+    width: '98%'
   },
 
   /*------*/
@@ -13,27 +15,27 @@ export const developmentBricks = {
   'push' : {
     title: 'Push',
     description: 'An app that...',
-    width: '60%'
+    width: '59%'
   },
 
   'integral' : {
     title: 'Integral Theory',
     description: 'A website explaining...',
-    width: '40%'
+    width: '39%'
   },
 
   /*------*/
 
   'brooklands' : {
-    title: 'Push',
+    title: 'Brooklands Motorworks',
     description: 'A website for...',
-    width: '40%'
+    width: '39%'
   },
 
   'andy-hillier' : {
     title: 'Andy Hillier Personal Trainer',
     description: 'A website for...',
-    width: '60%'
+    width: '59%'
   },
 
   /*------*/
@@ -47,27 +49,43 @@ export const productDesignBricks = {
     'sfere' : {
       title: 'SFere',
       description: 'An iron for arthritics...',
-      width: '50%',
-      height: '600px'
-    },
-
-    'cad' : {
-      title: 'CAD',
-      description: 'A collection of Computer Aided Designs...',
-      width: '50%'
+      width: '49%',
+      height: '600px',
+      image: sfereImage
     },
 
     /*------*/
 
-    'sketching' : {
-      title: 'Sketching',
-      description: 'A series of sketches...',
-      width: '25%'
-    },
+    'bigBrick' : {
 
-    'practical' : {
-      title: 'Practical',
-      description: 'A series of practical projects...',
-      width: '25%'
-    },
+      width: '49%',
+      height: '600px',
+
+      innerBricks: {
+
+        'cad' : {
+          title: 'CAD',
+          description: 'A collection of Computer Aided Designs...',
+          width: '99%'
+        },
+
+        'sketching' : {
+          title: 'Sketching',
+          description: 'A series of sketches...',
+          width: '49%'
+        },
+
+        'practical' : {
+          title: 'Practical',
+          description: 'A series of practical projects...',
+          width: '49%'
+        }
+
+      }
+
+
+
+    }
+
+
 }
