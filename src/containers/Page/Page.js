@@ -5,7 +5,7 @@ import { developmentBricks, productDesignBricks } from '../../resources/bricks.j
 
 import style from './Page.css';
 
-class Page extends React.Component {
+class Page extends Component {
 
   render() {
 
@@ -19,10 +19,13 @@ class Page extends React.Component {
 
     let devBricks = devBrickArray.map( brick => (
       <Brick
+        key={brick.id}
         title={brick.title}
         description={brick.description}
-        width={brick.width}
+        widths={brick.widths}
         height={brick.height == null ? '300px' : brick.height}
+        innerBricks={brick.innerBricks}
+        image={brick.image}
       />
     ))
 
@@ -36,9 +39,10 @@ class Page extends React.Component {
 
     let pdBricks = pdBrickArray.map( brick => (
       <Brick
+        key={brick.id}
         title={brick.title}
         description={brick.description}
-        width={brick.width}
+        widths={brick.widths}
         height={brick.height == null ? '300px' : brick.height}
         innerBricks={brick.innerBricks}
         image={brick.image}
@@ -47,7 +51,7 @@ class Page extends React.Component {
 
     return (
       <React.Fragment>
-        <h1>{this.props.isDevWork ? 'Development Work' : 'Product Design'}</h1>
+        <h1 className={style.heading}>{this.props.isDevWork ? 'Development Work' : 'Product Design'}</h1>
         <div className={style.brickWall}>
           {this.props.isDevWork ? devBricks : pdBricks}
         </div>

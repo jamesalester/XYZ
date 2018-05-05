@@ -7,9 +7,10 @@ const brickBuilder = (props) => {
     <Brick
       title={props.title}
       description={props.description}
-      width={props.width}
+      widths={props.widths}
       height={props.height == null ? '300px' : props.height}
       innerBricks={props.innerBricks}
+      image={props.image}
     />
   );
 };

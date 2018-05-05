@@ -1,4 +1,10 @@
+import brooklandsImage from '../assets/portfolio/brooklands/brooklands_hero.png';
+import cadImage from '../assets/portfolio/cad/cad_hero.jpg';
+import practicalImage from '../assets/portfolio/practical/practical_hero.jpg';
 import sfereImage from '../assets/portfolio/sfere/sfere-hero.jpg';
+import sketchesImage from '../assets/portfolio/sketches/sketches_hero.jpg';
+
+// Widths: [>1000px, <1000px, <750px, <600px]
 
 export const developmentBricks = {
 
@@ -7,7 +13,7 @@ export const developmentBricks = {
   'pnt' : {
     title: 'Paranormal Today Series',
     description: 'A Series of apps...',
-    width: '98%'
+    widths: ['100%','100%','100%','100%']
   },
 
   /*------*/
@@ -15,13 +21,13 @@ export const developmentBricks = {
   'push' : {
     title: 'Push',
     description: 'An app that...',
-    width: '59%'
+    widths: ['60%','60%','50%','100%']
   },
 
   'integral' : {
     title: 'Integral Theory',
     description: 'A website explaining...',
-    width: '39%'
+    widths: ['40%','40%','50%','100%']
   },
 
   /*------*/
@@ -29,13 +35,14 @@ export const developmentBricks = {
   'brooklands' : {
     title: 'Brooklands Motorworks',
     description: 'A website for...',
-    width: '39%'
+    widths: ['40%','40%','50%','100%'],
+    image: brooklandsImage
   },
 
   'andy-hillier' : {
     title: 'Andy Hillier Personal Trainer',
     description: 'A website for...',
-    width: '59%'
+    widths: ['60%','60%','50%','100%']
   },
 
   /*------*/
@@ -49,7 +56,7 @@ export const productDesignBricks = {
     'sfere' : {
       title: 'SFere',
       description: 'An iron for arthritics...',
-      width: '49%',
+      widths: ['50%','100%','100%','100%'],
       height: '600px',
       image: sfereImage
     },
@@ -58,7 +65,7 @@ export const productDesignBricks = {
 
     'bigBrick' : {
 
-      width: '49%',
+      widths: ['50%','100%','100%','100%'],
       height: '600px',
 
       innerBricks: {
@@ -66,19 +73,22 @@ export const productDesignBricks = {
         'cad' : {
           title: 'CAD',
           description: 'A collection of Computer Aided Designs...',
-          width: '99%'
+          widths: ['100%','100%','100%','100%'],
+          image: cadImage
         },
 
         'sketching' : {
           title: 'Sketching',
           description: 'A series of sketches...',
-          width: '49%'
+          widths: ['50%','50%','50%','100%'],
+          image: sketchesImage
         },
 
         'practical' : {
           title: 'Practical',
           description: 'A series of practical projects...',
-          width: '49%'
+          widths: ['50%','50%','50%','100%'],
+          image: practicalImage
         }
 
       }
