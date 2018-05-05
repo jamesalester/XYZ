@@ -10,11 +10,23 @@
   max-height: 30vh;
   width: auto;
   align-self: center;
+  transition: all 5s ease-in-out;
+}
+
+.logo:hover {
+  transform: scale(1.1);
 }
 
 .arrow {
   opacity: 0.3;
+  cursor: pointer;
   width: 100%;
   height: 2vh;
   margin-bottom: 2vh;
+  transition: all .5s ease-in-out;
+}
+
+.arrow:hover {
+  opacity: 0.7;
+  transform: scale(1.1);
 }

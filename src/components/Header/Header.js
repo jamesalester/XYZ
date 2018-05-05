@@ -10,7 +10,7 @@ const header = (props) => {
       <div className={style.container}>
         <img className={style.logo} src={logo} alt='James Lester' />
       </div>
-      <img className={style.arrow} src={arrow} alt='James Lester' />
+      <img className={style.arrow} src={arrow} alt='James Lester' onClick={props.clicked} />
     </div>
   );
 };
