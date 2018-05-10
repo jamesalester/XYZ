@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Rock+Salt');
+
+.brickWall {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 auto;
+  width: 100vw;
+  max-width: 1200px;
+}
+
+.heading {
+  margin: 100px auto 0 auto;
+  width: 90vw;
+  max-width: 1200px;
+  font-family: 'Rock Salt', cursive;
+  font-size: 2.3em;
+  text-align: center;
+  color: #6bc1cf;
+}
+
+.brick {
+  position: relative;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  overflow: hidden;
+}
+
+@media (min-width: 576px) {
+  .brickWall {
+    width: 90vw;
+  }
+
+  .heading {
+    text-align: left;
+  }
+
+  .brick {
+    border: 2px solid #fff;
+  }
+}
+
+.halfbrick {
+  width: 50%;
+  height: 600px;
+}
+
+.quarterbrick {
+  width: 100%;
+  height: 50%;
+}
+
+.about {
+  composes: quarterbrick;
+  composes: brick;
+  background-color: #6bc1cf;
+}
+
+.snakes {
+  composes: quarterbrick;
+  composes: brick;
+}
+
+.contact {
+  composes: halfbrick;
+  composes: brick;
+  background-color: #6bc1cf50;
+}

@@ -26,6 +26,7 @@ class Page extends Component {
         height={brick.height == null ? '300px' : brick.height}
         innerBricks={brick.innerBricks}
         image={brick.image}
+        textAttr={brick.textAttr}
       />
     ))
 
@@ -38,6 +39,7 @@ class Page extends Component {
     }
 
     let pdBricks = pdBrickArray.map( brick => (
+      // console.log('[PAGE] ' + );
       <Brick
         key={brick.id}
         title={brick.title}
@@ -46,16 +48,17 @@ class Page extends Component {
         height={brick.height == null ? '300px' : brick.height}
         innerBricks={brick.innerBricks}
         image={brick.image}
+        textAttr={brick.textAttr}
       />
     ))
 
     return (
-      <React.Fragment>
+      <div>
         <h1 className={style.heading}>{this.props.isDevWork ? 'Development Work' : 'Product Design'}</h1>
         <div className={style.brickWall}>
           {this.props.isDevWork ? devBricks : pdBricks}
         </div>
-      </React.Fragment>
+      </div>
     );
   }
 }

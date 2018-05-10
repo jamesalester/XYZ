@@ -11,6 +11,7 @@ const brickBuilder = (props) => {
       height={props.height == null ? '300px' : props.height}
       innerBricks={props.innerBricks}
       image={props.image}
+      textAttr={props.textAttr}
     />
   );
 };
