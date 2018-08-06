@@ -20,6 +20,7 @@ class Page extends Component {
     let devBricks = devBrickArray.map( brick => (
       <Brick
         key={brick.id}
+        id={brick.id}
         title={brick.title}
         description={brick.description}
         widths={brick.widths}
@@ -42,6 +43,7 @@ class Page extends Component {
       // console.log('[PAGE] ' + );
       <Brick
         key={brick.id}
+        id={brick.id}
         title={brick.title}
         description={brick.description}
         widths={brick.widths}

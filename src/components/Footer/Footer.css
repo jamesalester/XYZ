@@ -15,6 +15,20 @@
 	width: auto;
 }
 
+.returnContainer {
+  composes: logoContainer;
+
+	-webkit-transition: all ease 1s;
+	-moz-transition: all ease 1s;
+	-o-transition: all ease 1s;
+	-ms-transition: all ease 1s;
+	transition: all ease 1s;
+}
+
+.returnContainer:hover {
+  transform: rotate(-90deg);
+}
+
 .logo {
   max-height: 100px;
   width: auto;

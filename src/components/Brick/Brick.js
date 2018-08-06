@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 
 import BrickBuilder from './BrickBuilder.js';
 import style from './Brick.css';
@@ -28,6 +29,10 @@ class Brick extends Component {
     this.setState({ width: window.innerWidth });
   }
 
+  handleClick = () => {
+    this.props.history.push(`/portfolio/${this.props.id}`);
+  }
+
   render () {
 
     const innerBrickArray = [];
@@ -41,6 +46,7 @@ class Brick extends Component {
     let innerBricks = innerBrickArray.map( brick => (
       <BrickBuilder
         key={brick.id}
+        id={brick.id}
         title={brick.title}
         description={brick.description}
         widths={brick.widths}
@@ -53,8 +59,6 @@ class Brick extends Component {
 
     const classes = innerBricks.length === 0 ? style.brick : style.brickWall;
 
-    console.log('[this.props.textAttr] ' + this.props.textAttr);
-
     let textAttr = this.props.textAttr || {
       color: 'blue',
       alignment: ['left', 'center']
@@ -64,10 +68,8 @@ class Brick extends Component {
       textAlign: textAttr.alignment[0]
     }
 
-    console.log('[textAttr] ' + textAttr);
-
     let width = this.props.widths[0];
-    if (this.state.width<600) {
+    if (this.state.width<576) {
       width = this.props.widths[3]
       textStyle = {...textStyle, textAlign: textAttr.alignment[1]}
     } else if (this.state.width<750) {
@@ -78,7 +80,7 @@ class Brick extends Component {
       textStyle = {...textStyle, textAlign: textAttr.alignment[1]}
     };
 
-    const height = this.state.width < 576 ? 200 : this.props.height
+    const height = this.state.width < 576 ? (this.props.innerBricks ? 600 : 200) : this.props.height
     const textDiv = this.props.title != null ? (
       <div className={style.textContainer}>
         <h1 style={textStyle}>{String(this.props.title).toUpperCase()}</h1>
@@ -87,13 +89,13 @@ class Brick extends Component {
     ) : null;
 
     return (
-      <div className={classes} style={{width: width, height: height}}>
+      <div className={classes} style={{width: width, height: height}} onClick={this.props.id === 'bigBrick' ? null : this.handleClick}>
         {this.props.image != null ? <img className={style.image} alt={'James Lester\'s ' + this.props.title}  src={this.props.image} /> : null}
-        {textDiv}
+        {/* {textDiv} */}
         {innerBricks}
       </div>
     );
   }
 }
 
-export default Brick;
+export default withRouter(Brick);

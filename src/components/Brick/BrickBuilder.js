@@ -5,6 +5,7 @@ import Brick from './Brick.js';
 const brickBuilder = (props) => {
   return (
     <Brick
+      id={props.id}
       title={props.title}
       description={props.description}
       widths={props.widths}

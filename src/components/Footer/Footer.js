@@ -5,9 +5,11 @@ import style from './Footer.css';
 
 const footer = (props) => {
 
+  let containerClass = props.return ? style.returnContainer : style.logoContainer;
+
   return (
     <div className={style.container}>
-      <div className={style.logoContainer}>
+      <div className={containerClass}>
         <img
           className={style.logo}
           src={logo}

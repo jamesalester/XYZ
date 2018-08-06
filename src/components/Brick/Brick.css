@@ -17,6 +17,7 @@
   border-top: 2px solid #fff;
   border-bottom: 2px solid #fff;
   overflow: hidden;
+  cursor: pointer;
 }
 
 @media (min-width: 576px) {
