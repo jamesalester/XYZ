@@ -67,7 +67,7 @@
 .codeBlock {
   border-top: 2px solid #fff;
   border-bottom: 2px solid #fff;
-  margin-top: -40px;
+  /* margin-top: -40px; */
   z-index: 0;
   width: calc(100% - 4px);
 }

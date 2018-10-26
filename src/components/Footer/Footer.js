@@ -1,11 +1,12 @@
-import React from 'react';
+import React from "react";
 
-import logo from '../../assets/logo.svg';
-import style from './Footer.css';
+import logo from "../../assets/logo.svg";
+import style from "./Footer.css";
 
-const footer = (props) => {
-
-  let containerClass = props.return ? style.returnContainer : style.logoContainer;
+const footer = props => {
+  let containerClass = props.return
+    ? style.returnContainer
+    : style.logoContainer;
 
   return (
     <div className={style.container}>
@@ -13,7 +14,7 @@ const footer = (props) => {
         <img
           className={style.logo}
           src={logo}
-          alt='James Lester'
+          alt="James Lester"
           onClick={props.clicked}
         />
       </div>

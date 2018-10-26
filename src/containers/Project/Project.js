@@ -1,24 +1,22 @@
-import React from 'react';
-import { withRouter } from 'react-router-dom';
+import React from "react";
+import { withRouter } from "react-router-dom";
 
-import style from './Project.css';
-import data from '../../resources/bricks';
+import style from "./Project.css";
+import data from "../../resources/bricks";
 
-import Footer from '../../components/Footer/Footer';
+import Footer from "../../components/Footer/Footer";
 
 class Project extends React.Component {
-
   componentWillMount() {
-    this.projectID = this.props.match.params['project'];
+    this.projectID = this.props.match.params["project"];
     this.project = data[this.projectID];
   }
 
   goToHome = () => {
     this.props.history.push(`/`);
-  }
+  };
 
   render() {
-
     // const imageArray = [];
     // for ( let image in this.project.images ) {
     //     imageArray.push( {
@@ -29,14 +27,31 @@ class Project extends React.Component {
 
     var images = null;
     if (this.project.images) {
-      images = this.project.images.map( image => (
-        <img className={style.headerImage} src={image} />
-      ))
+      images = this.project.images.map(image => (
+        <img
+          className={style.headerImage}
+          src={image}
+          alt={this.project.title}
+        />
+      ));
     }
 
     var codeBlock = null;
     if (this.project.code) {
-      codeBlock = <iframe className={style.codeBlock} height='600px' width='100%' src={this.project.code} scrolling='no' frameborder='no' allowtransparency='true' allowfullscreen='true' sandbox='allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals'></iframe>
+      codeBlock = (
+        <iframe
+          title="Snakes and Ladders"
+          className={style.codeBlock}
+          height="600px"
+          width="100%"
+          src={this.project.code}
+          scrolling="no"
+          frameborder="no"
+          allowtransparency="true"
+          allowfullscreen="true"
+          sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"
+        />
+      );
     }
 
     // images.shift()
