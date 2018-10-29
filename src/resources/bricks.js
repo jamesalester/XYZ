@@ -20,16 +20,17 @@ import cad3 from "../assets/portfolio/cad/cad3.jpg";
 import cad4 from "../assets/portfolio/cad/cad4.jpg";
 
 import gyreImage from "../assets/portfolio/gyre/gyre_hero.jpg";
-import gyre0 from "../assets/portfolio/andyhillier/andyhillier0.jpg";
-import gyre1 from "../assets/portfolio/andyhillier/andyhillier1.jpg";
+import gyre0 from "../assets/portfolio/gyre/gyre0.jpg";
+import gyre1 from "../assets/portfolio/gyre/gyre1.jpg";
+import gyre2 from "../assets/portfolio/gyre/gyre2.jpg";
 
 import integralImage from "../assets/portfolio/integral/integral_hero.jpg";
 import integral0 from "../assets/portfolio/integral/integral0.jpg";
 import integral1 from "../assets/portfolio/integral/integral1.jpg";
 
 import kevwarwickImage from "../assets/portfolio/kevwarwick/kevwarwick_hero.jpg";
-import kevwarwick0 from "../assets/portfolio/brooklands/brooklands0.jpg";
-import kevwarwick1 from "../assets/portfolio/brooklands/brooklands1.jpg";
+import kevwarwick0 from "../assets/portfolio/kevwarwick/kevwarwick0.jpg";
+import kevwarwick1 from "../assets/portfolio/kevwarwick/kevwarwick1.jpg";
 
 import practicalImage from "../assets/portfolio/practical/practical_hero.jpg";
 import practical0 from "../assets/portfolio/practical/practical0.jpg";
@@ -62,14 +63,19 @@ const data = {
   gyre: {
     title: "GYRE",
     description:
-      "GYRE was an interesting project - an app for university students to swap their possessions using a tinder-like swiping mechanism. It was written in Swift for iOS. It involves email and social logins, sharing functions, the swiping mechanism, user profiles, a messaging service, notifications, and so much more.",
+      "GYRE was an interesting project - an app for university students to swap their possessions using a tinder-like swiping mechanism. It was written in Swift for iOS. It involves email and social logins, sharing functions, the swiping mechanism, user profiles, a messaging service, notifications, a search and filter, and so much more.",
     widths: ["60%", "50%", "100%", "100%"],
     image: gyreImage,
-    images: [gyre0, gyre1],
+    images: [gyre0, gyre1, gyre2],
     textAttr: {
       color: "#FFFFFF",
       alignment: ["right", "right"]
-    }
+    },
+    links: [
+      "https://itunes.apple.com/GB/app/id1434830638?mt=8",
+      "https://itunes.apple.com/GB/app/id1434830638?mt=8",
+      "https://itunes.apple.com/GB/app/id1434830638?mt=8"
+    ]
   },
   kevWarwick: {
     title: "Kevin Warwick Personal Trainer",
@@ -81,7 +87,8 @@ const data = {
     textAttr: {
       color: "#FFFFFF",
       alignment: ["left", "left"]
-    }
+    },
+    links: ["https://kevinwarwickpt.com", "https://kevinwarwickpt.com"]
   },
   /*------*/
   pnt: {
@@ -94,7 +101,13 @@ const data = {
     textAttr: {
       color: "#FFFFFF",
       alignment: ["left", "center"]
-    }
+    },
+    links: [
+      "https://itunes.apple.com/gb/app/cryptozoology-today/id1087423602?mt=8",
+      "https://itunes.apple.com/gb/app/cryptozoology-today/id1087423602?mt=8",
+      "https://itunes.apple.com/gb/app/supernatural-today/id1170283486?mt=8",
+      "https://itunes.apple.com/gb/app/close-encounters-today/id1193259916?mt=8"
+    ]
   },
   /*------*/
   integral: {
@@ -107,7 +120,8 @@ const data = {
     textAttr: {
       color: "#FFFFFF",
       alignment: ["left", "left"]
-    }
+    },
+    links: ["https://integral-theory.com/", "https://integral-theory.com/"]
   },
   push: {
     title: "Push",
@@ -132,7 +146,8 @@ const data = {
     textAttr: {
       color: "#FFFFFF",
       alignment: ["right", "right"]
-    }
+    },
+    links: ["https://www.andyhillierpt.com/", "https://www.andyhillierpt.com/"]
   },
   brooklands: {
     title: "Brooklands Motorworks",
@@ -144,7 +159,11 @@ const data = {
     textAttr: {
       color: "#FFFFFF",
       alignment: ["left", "left"]
-    }
+    },
+    links: [
+      "http://brooklandsmotorworks.org/",
+      "http://brooklandsmotorworks.org/"
+    ]
   },
 
   /*------*/
@@ -161,7 +180,11 @@ const data = {
     textAttr: {
       color: "#FFFFFF",
       alignment: ["right", "right"]
-    }
+    },
+    links: [
+      "https://itunes.apple.com/gb/app/cryptozoology-today/id1087423602?mt=8",
+      "https://itunes.apple.com/gb/app/cryptozoology-today/id1087423602?mt=8"
+    ]
   },
   /*------*/
   cad: {

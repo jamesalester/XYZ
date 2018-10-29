@@ -27,13 +27,23 @@ class Project extends React.Component {
 
     var images = null;
     if (this.project.images) {
-      images = this.project.images.map(image => (
-        <img
-          className={style.headerImage}
-          src={image}
-          alt={this.project.title}
-        />
-      ));
+      images = this.project.images.map((image, index) => {
+        return this.project.links ? (
+          <a href={this.project.links[index]} target="_ blank">
+            <img
+              className={style.headerImage}
+              src={image}
+              alt={this.project.title}
+            />
+          </a>
+        ) : (
+          <img
+            className={style.headerImage}
+            src={image}
+            alt={this.project.title}
+          />
+        );
+      });
     }
 
     var codeBlock = null;

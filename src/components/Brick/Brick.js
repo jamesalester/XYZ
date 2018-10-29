@@ -57,25 +57,25 @@ class Brick extends Component {
 
     const classes = innerBricks.length === 0 ? style.brick : style.brickWall;
 
-    let textAttr = this.props.textAttr || {
-      color: "blue",
-      alignment: ["left", "center"]
-    };
-    let textStyle = {
-      color: textAttr.color,
-      textAlign: textAttr.alignment[0]
-    };
+    // let textAttr = this.props.textAttr || {
+    //   color: "blue",
+    //   alignment: ["left", "center"]
+    // };
+    // let textStyle = {
+    //   color: textAttr.color,
+    //   textAlign: textAttr.alignment[0]
+    // };
 
     let width = this.props.widths[0];
     if (this.state.width < 576) {
       width = this.props.widths[3];
-      textStyle = { ...textStyle, textAlign: textAttr.alignment[1] };
+      // textStyle = { ...textStyle, textAlign: textAttr.alignment[1] };
     } else if (this.state.width < 750) {
       width = this.props.widths[2];
-      textStyle = { ...textStyle, textAlign: textAttr.alignment[1] };
+      // textStyle = { ...textStyle, textAlign: textAttr.alignment[1] };
     } else if (this.state.width < 1000) {
       width = this.props.widths[1];
-      textStyle = { ...textStyle, textAlign: textAttr.alignment[1] };
+      // textStyle = { ...textStyle, textAlign: textAttr.alignment[1] };
     }
 
     const height =
@@ -84,13 +84,13 @@ class Brick extends Component {
           ? 600
           : 200
         : this.props.height;
-    const textDiv =
-      this.props.title != null ? (
-        <div className={style.textContainer}>
-          <h1 style={textStyle}>{String(this.props.title).toUpperCase()}</h1>
-          <p style={textStyle}>{this.props.description}</p>
-        </div>
-      ) : null;
+    // const textDiv =
+    //   this.props.title != null ? (
+    //     <div className={style.textContainer}>
+    //       <h1 style={textStyle}>{String(this.props.title).toUpperCase()}</h1>
+    //       <p style={textStyle}>{this.props.description}</p>
+    //     </div>
+    //   ) : null;
 
     return (
       <div
