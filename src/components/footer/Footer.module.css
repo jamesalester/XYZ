@@ -1,0 +1,39 @@
+.container {
+	width: 100%;
+	height: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.logoContainer {
+	background-image: url('../../assets/logo_footer.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	height: 100px;
+	width: auto;
+	display: flex;
+	justify-content: center;
+}
+
+.returnContainer {
+	composes: logoContainer;
+	transition: all ease 1s;
+}
+
+.returnContainer:hover {
+	transform: rotate(-90deg);
+}
+
+.logo {
+	max-height: 100px;
+	width: auto;
+	align-self: center;
+	cursor: pointer;
+	transition: all ease 1s;
+}
+
+.logo:hover {
+	opacity: 0;
+}
