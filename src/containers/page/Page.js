@@ -7,6 +7,7 @@ import style from './Page.module.css';
 
 const Page = (props) => {
 	const { isDevWork } = props;
+
 	return (
 		<div>
 			<h1 className={style.heading}>{isDevWork ? 'Development Work' : 'Product Design'}</h1>

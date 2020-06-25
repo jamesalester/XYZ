@@ -1,10 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useLayoutEffect } from 'react';
 import PropTypes from 'prop-types';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
 import { useHistory } from 'react-router-dom';
 
 import { getBricks } from '../../resources/bricks';
 
 import style from './Brick.module.css';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Brick = (props) => {
 	const { id, innerBricks, widths, height, image, title } = props;
@@ -14,6 +18,21 @@ const Brick = (props) => {
 	const [innerBrickArray, setInnerBricks] = useState([]);
 	const [containerClass, setContainerClass] = useState([]);
 	let history = useHistory();
+
+	useLayoutEffect(() => {
+		ScrollTrigger.create({
+			trigger: `#brick-${id}`,
+			start: 'center bottom',
+			onEnter: () =>
+				gsap.to(`#brick-${id}`, {
+					opacity: 1,
+					y: 0,
+					duration: 0.5,
+				}),
+			once: true,
+		});
+		ScrollTrigger.refresh();
+	}, [id]);
 
 	useEffect(() => {
 		window.addEventListener('resize', () => setWidth(window.innerWidth));
@@ -43,7 +62,12 @@ const Brick = (props) => {
 	};
 
 	return (
-		<div className={containerClass} style={{ width: brickWidth, height: brickHeight }} onClick={handleClick}>
+		<div
+			id={`brick-${id}`}
+			className={containerClass}
+			style={{ width: brickWidth, height: brickHeight, opacity: 0, transform: 'translateY(80px)' }}
+			onClick={handleClick}
+		>
 			{image && <img className={style.image} alt={"James Lester's " + title} src={image} />}
 			{innerBrickArray}
 		</div>
